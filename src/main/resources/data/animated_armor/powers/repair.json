@@ -133,7 +133,7 @@
           "type": "origins:resource",
           "resource": "animated_armor:steel_constitution_armor_resource",
           "comparison": "<",
-          "compare_to": 32
+          "compare_to": 28
         },
         {
           "type": "origins:or",
