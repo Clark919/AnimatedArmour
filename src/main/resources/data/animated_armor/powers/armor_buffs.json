@@ -1,0 +1,155 @@
+{
+  "type": "origins:multiple",
+  "no_helm": {
+    "type": "origins:prevent_entity_render",
+    "bientity_condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:distance",
+          "comparison": ">=",
+          "compare_to": 24
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:armor_state_armor_state",
+          "comparison": "<=",
+          "compare_to": 3
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "animated_armor:living_helmet"
+            }
+          },
+          "inverted": true
+        }
+      ]
+    }
+  },
+  "yes_chest": {
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+      {
+        "name": "Extra Reach block reach",
+        "attribute": "reach-entity-attributes:reach",
+        "value": 1.5,
+        "operation": "addition"
+      },
+      {
+        "name": "Extra Reach entity reach",
+        "attribute": "reach-entity-attributes:attack_range",
+        "value": 1.5,
+        "operation": "addition"
+      }
+    ],
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:armor_state_armor_state",
+          "comparison": "<=",
+          "compare_to": 2,
+          "inverted": true
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "chest",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "animated_armor:living_chestplate"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "no_chest": {
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+      {
+        "name": "Extra Reach block reach",
+        "attribute": "reach-entity-attributes:reach",
+        "value": -0.25,
+        "operation": "addition"
+      },
+      {
+        "name": "Extra Reach entity reach",
+        "attribute": "reach-entity-attributes:attack_range",
+        "value": -0.25,
+        "operation": "addition"
+      },
+      {
+        "name": "less damage",
+        "attribute": "minecraft:generic.attack.damage",
+        "value": -0.5,
+        "operation": "addition"
+      }
+    ],
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:armor_state_armor_state",
+          "comparison": "<=",
+          "compare_to": 2
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "chest",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "animated_armor:living_chestplate"
+            }
+          },
+          "inverted": true
+        }
+      ]
+    }
+  },
+  "no_legs": {
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "addition",
+        "value": 0.1
+      }
+    ],
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:armor_state_armor_state",
+          "comparison": "<=",
+          "compare_to": 1
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "legs",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "animated_armor:living_leggings"
+            }
+          },
+          "inverted": true
+        }
+      ]
+    }
+  },
+  "hidden": "true"
+}

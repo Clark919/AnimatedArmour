@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "animated_armor",
+  "version": "${version}",
+
+  "name": "Animated Armor Origin",
+  "description": "An addon for the Origin mod that adds the Animated Armor; a sentient suit of armour this is very durable and has inherent magical properties.",
+  "authors": [
+    "Clarkster"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/animated-armor-an-origins-addon",
+    "sources": "https://github.com/Clark919/ExpandedClasses",
+    "issues": "https://github.com/Clark919/ExpandedClasses/issues"
+  },
+
+  "license": "MIT",
+  "icon": "assets/animatedarmor/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.clarkster.animated_armor.AnimatedArmorMod"
+    ],
+    "client": [
+      "com.clarkster.animated_armor.ClientMod"
+    ]
+  },
+  "mixins": [
+
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": ">=1.19",
+    "java": ">=17",
+    "origins": ">=1.6.2"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

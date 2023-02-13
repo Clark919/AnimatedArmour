@@ -1,0 +1,51 @@
+{
+  "type": "origins:multiple",
+  "immunity": {
+    "type": "origins:effect_immunity",
+    "effects": [
+      "minecraft:weakness",
+      "minecraft:strength",
+      "minecraft:speed",
+      "minecraft:slowness",
+      "minecraft:haste",
+      "minecraft:mining_fatigue",
+      "minecraft:instant_health",
+      "minecraft:instant_damage",
+      "minecraft:jump_boost",
+      "minecraft:nausea",
+      "minecraft:regeneration",
+      "minecraft:resistance",
+      "minecraft:fire_resistance",
+      "minecraft:water_breathing",
+      "minecraft:invisibility",
+      "minecraft:blindness",
+      "minecraft:night_vision",
+      "minecraft:hunger",
+      "minecraft:poison",
+      "minecraft:wither",
+      "minecraft:health_boost",
+      "minecraft:absorption",
+      "minecraft:saturation",
+      "minecraft:glowing",
+      "minecraft:levitation",
+      "minecraft:luck",
+      "minecraft:unluck",
+      "minecraft:slow_falling",
+      "minecraft:conduit_power",
+      "minecraft:dolphins_grace",
+      "minecraft:bad_omen",
+      "minecraft:hero_of_the_village"
+    ]
+  },
+  "clear": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "effect clear @s",
+      "permission_level": 4
+    },
+    "interval": 1
+  },
+  "name": "Antimagic Ward",
+  "description": "You are immune to all potion and status effects."
+}

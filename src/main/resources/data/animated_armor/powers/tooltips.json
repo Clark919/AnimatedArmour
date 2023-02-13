@@ -1,0 +1,56 @@
+{
+  "type": "origins:multiple",
+  "helmet_tooltip": {
+    "type": "origins:tooltip",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "item": "animated_armor:living_helmet"
+      }
+    },
+    "text": {
+      "text": "What should be a lifeless helmet belonging to a suit of armor \nnow hums with the presence of a fallen warrior's soul.",
+      "color": "aqua"
+    }
+  },
+  "chest_tooltip": {
+    "type": "origins:tooltip",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "item": "animated_armor:living_chestplate"
+      }
+    },
+    "text": {
+      "text": "The old chestplate is still in solid condition. \nThe detached gauntlets extend the range of the arcane spirit within.",
+      "color": "aqua"
+    }
+  },
+  "legs_tooltip": {
+    "type": "origins:tooltip",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "item": "animated_armor:living_leggings"
+      }
+    },
+    "text": {
+      "text": "The legs of the suit remain sturdy, \nbut worn from years of use.",
+      "color": "aqua"
+    }
+  },
+  "boots_tooltip": {
+    "type": "origins:tooltip",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "item": "animated_armor:living_boots"
+      }
+    },
+    "text": {
+      "text": "The boots are well kept, besides a coating of mud. If you were to lose the rest of your armour, \nthese boots seem light enough to travel with great haste.",
+      "color": "aqua"
+    }
+  },
+  "hidden": true
+}

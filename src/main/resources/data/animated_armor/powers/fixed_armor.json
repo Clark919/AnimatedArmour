@@ -1,0 +1,56 @@
+{
+  "type": "origins:action_on_callback",
+  "entity_action_added": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.head with animated_armor:living_helmet{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.chest with animated_armor:living_chestplate{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.legs with animated_armor:living_leggings{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.feet with animated_armor:living_boots{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+        "permission_level": 4
+      }
+    ]
+  },
+  "entity_action_respawned": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.head with animated_armor:living_helmet{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.chest with animated_armor:living_chestplate{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.legs with animated_armor:living_leggings{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.feet with animated_armor:living_boots{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+        "permission_level": 4
+      }
+    ]
+  },
+  "execute_chosen_when_orb": true,
+  "name": "Living Armor",
+  "description": "You inhabit a suit of armor. You cannot equip other armors or remove your armor."
+}

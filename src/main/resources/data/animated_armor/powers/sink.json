@@ -1,0 +1,20 @@
+{
+	"type": "origins:multiple",
+	"sink": {
+		"type": "origins:ignore_water"
+	},
+	"breathing": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:gain_air",
+			"value": 20
+		},
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:water"
+		}
+	},
+	"name": "Heavy Metal",
+	"description": "Your dense body weighs you down in water, but also renders you immune to knockback. You don't need to breathe in water as you have no lungs."
+}

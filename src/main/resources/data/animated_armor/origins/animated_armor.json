@@ -1,0 +1,23 @@
+{
+  "powers": [
+    "animated_armor:fixed_armor",
+    "animated_armor:armor_block",
+    "animated_armor:steel_constitution",
+    "animated_armor:repair",
+    "animated_armor:decoy",
+    "animated_armor:armor_state",
+    "animated_armor:armor_buffs",
+    "animated_armor:deflective_plating",
+    "animated_armor:invisible",
+    "animated_armor:construct",
+    "animated_armor:sink",
+    "animated_armor:slow",
+    "animated_armor:restless",
+    "animated_armor:immune"
+  ],
+  "icon": "animated_armor:living_chestplate",
+  "order": 10,
+  "impact": 2,
+  "name": "Animated Armor",
+  "description": "A sentient suit of magically animated armor, brought to life by unknown arcane enchantments."
+}

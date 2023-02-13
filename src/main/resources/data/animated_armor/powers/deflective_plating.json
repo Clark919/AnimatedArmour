@@ -1,0 +1,18 @@
+{
+  "type": "origins:modify_damage_taken",
+  "damage_condition": {
+    "type": "origins:projectile",
+    "projectile": "minecraft:arrow"
+  },
+  "self_action": {
+    "type": "origins:execute_command",
+    "command": "playsound minecraft:block.anvil.land master @a ~ ~ ~ 1 1.8"
+  },
+  "modifier": {
+    "name": "No Damage",
+    "operation": "multiply_base_additive",
+    "value": -1
+  },
+  "name": "Deflective Plating",
+  "description": "You take no damage from regular arrows."
+}

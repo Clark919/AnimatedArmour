@@ -1,0 +1,10 @@
+{
+  "type": "origins:invisibility",
+  "render_armor": true,
+  "hidden": true,
+  "condition": {
+    "type": "origins:power",
+    "power": "animated_armor:immobile",
+    "inverted": true
+  }
+}

@@ -1,0 +1,438 @@
+{
+  "type": "origins:multiple",
+  "armor_state": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 4,
+    "start_value": 4,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "refresh_on_respawn": {
+    "type": "origins:action_on_callback",
+    "entity_action_respawned": {
+      "type": "origins:change_resource",
+      "resource": "*:*_armor_state",
+      "change": 4
+    }
+  },
+  "armor_100": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "start_value": 1,
+    "hud_render": {
+      "sprite_location": "animated_armor:textures/gui/resources/armor_resource_bar.png",
+      "bar_index": 1,
+      "should_render": true,
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_armor_state",
+        "comparison": "==",
+        "compare_to": 4
+      }
+    }
+  },
+  "armor_75": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "start_value": 1,
+    "hud_render": {
+      "sprite_location": "animated_armor:textures/gui/resources/armor_resource_bar.png",
+      "bar_index": 2,
+      "should_render": true,
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_armor_state",
+        "comparison": "==",
+        "compare_to": 3
+      }
+    }
+  },
+  "armor_50": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "start_value": 1,
+    "hud_render": {
+      "sprite_location": "animated_armor:textures/gui/resources/armor_resource_bar.png",
+      "bar_index": 3,
+      "should_render": true,
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_armor_state",
+        "comparison": "==",
+        "compare_to": 2
+      }
+    }
+  },
+  "armor_25": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "start_value": 4,
+    "hud_render": {
+      "sprite_location": "animated_armor:textures/gui/resources/armor_resource_bar.png",
+      "bar_index": 4,
+      "should_render": true,
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_armor_state",
+        "comparison": "==",
+        "compare_to": 1
+      }
+    }
+  },
+  "set_state_100": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_armor_state",
+      "change": 4,
+      "operation": "set"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_state",
+          "comparison": "==",
+          "compare_to": 4,
+          "inverted": true
+        },
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:steel_constitution_armor_resource",
+          "comparison": ">=",
+          "compare_to": 21
+        }
+      ]
+    },
+    "interval": 4
+  },
+  "set_state_75": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_armor_state",
+      "change": 3,
+      "operation": "set"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_state",
+          "comparison": "==",
+          "compare_to": 3,
+          "inverted": true
+        },
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:steel_constitution_armor_resource",
+          "comparison": "<",
+          "compare_to": 21
+        },
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:steel_constitution_armor_resource",
+          "comparison": ">=",
+          "compare_to": 14
+        }
+      ]
+    },
+    "interval": 4
+  },
+  "set_state_50": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_armor_state",
+      "change": 2,
+      "operation": "set"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_state",
+          "comparison": "==",
+          "compare_to": 2,
+          "inverted": true
+        },
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:steel_constitution_armor_resource",
+          "comparison": "<",
+          "compare_to": 14
+        },
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:steel_constitution_armor_resource",
+          "comparison": ">=",
+          "compare_to": 7
+        }
+      ]
+    },
+    "interval": 4
+  },
+  "set_state_25": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_armor_state",
+      "change": 1,
+      "operation": "set"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_state",
+          "comparison": "==",
+          "compare_to": 1,
+          "inverted": true
+        },
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:steel_constitution_armor_resource",
+          "comparison": "<",
+          "compare_to": 7
+        }
+      ]
+    },
+    "interval": 4
+  },
+  "remove_helm": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "item replace entity @s armor.head with air",
+          "permission_level": 4
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.item.break master @a ~ ~ ~ 2 0.9",
+          "permission_level": 4
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_state",
+          "comparison": "<=",
+          "compare_to": 3
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:amount",
+            "comparison": ">=",
+            "compare_to": 1
+          }
+        }
+      ]
+    },
+    "interval": 4
+  },
+  "remove_chest": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "item replace entity @s armor.chest with air",
+          "permission_level": 4
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.item.break master @a ~ ~ ~ 2 0.9",
+          "permission_level": 4
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_state",
+          "comparison": "<=",
+          "compare_to": 2
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "chest",
+          "item_condition": {
+            "type": "origins:amount",
+            "comparison": ">=",
+            "compare_to": 1
+          }
+        }
+      ]
+    }
+  },
+    "remove_legs": {
+      "type": "origins:action_over_time",
+      "entity_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:execute_command",
+            "command": "item replace entity @s armor.legs with air",
+            "permission_level": 4
+          },
+          {
+            "type": "origins:execute_command",
+            "command": "playsound minecraft:entity.item.break master @a ~ ~ ~ 2 0.9",
+            "permission_level": 4
+          }
+        ]
+      },
+      "condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:resource",
+            "resource": "*:*_armor_state",
+            "comparison": "<=",
+            "compare_to": 1
+          },
+          {
+            "type": "origins:equipped_item",
+            "equipment_slot": "legs",
+            "item_condition": {
+              "type": "origins:amount",
+              "comparison": ">=",
+              "compare_to": 1
+            }
+          }
+        ]
+      },
+      "interval": 4
+    },
+  "attach_helm": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "item replace entity @s armor.head with animated_armor:living_helmet{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+          "permission_level": 4
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_state",
+          "comparison": ">=",
+          "compare_to": 4
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "head",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "animated_armor:living_helmet"
+            }
+          },
+          "inverted": true
+        }
+      ]
+    },
+    "interval": 4
+  },
+  "attach_chest": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "item replace entity @s armor.chest with animated_armor:living_chestplate{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+          "permission_level": 4
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_state",
+          "comparison": ">=",
+          "compare_to": 3
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "chest",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "animated_armor:living_chestplate"
+            }
+          },
+          "inverted": true
+        }
+      ]
+    },
+    "interval": 4
+  },
+  "attach_legs": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "item replace entity @s armor.legs with animated_armor:living_leggings{Unbreakable:1,Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}],HideFlags:5} 1",
+          "permission_level": 4
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_state",
+          "comparison": ">=",
+          "compare_to": 2
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "chest",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "animated_armor:living_leggings"
+            }
+          },
+          "inverted": true
+        }
+      ]
+    },
+    "interval": 4
+  },
+  "hidden": true,
+  "loading_priority": 1
+}

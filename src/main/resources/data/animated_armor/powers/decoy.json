@@ -1,0 +1,62 @@
+{
+  "type": "origins:active_self",
+  "entity_action": {
+    "type": "origins:if_else",
+    "condition": {
+      "type": "origins:power",
+      "power": "animated_armor:immobile"
+    },
+    "if_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "power revoke @s animated_armor:immobile"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "kill @e[tag=armor_decoy,distance=..5]"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:block.powder_snow.fall neutral @a ~ ~ ~ 2 0.6"
+        },
+        {
+          "type": "origins:execute_command",
+          "permission_level": 4,
+          "command": "team empty armor_decoy"
+        }
+
+      ]
+    },
+    "else_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "power grant @s animated_armor:immobile"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "summon armor_stand ~ ~ ~ {Invulnerable:1b,ShowArms:1b,ArmorItems:[{id:\"animated_armor:living_boots\",Count:1b},{id:\"animated_armor:living_leggings\",Count:1b},{id:\"animated_armor:living_chestplate\",Count:1b},{id:\"animated_armor:living_helmet\",Count:1b}],HandItems:[{},{}],Tags:[\"armor_decoy\"],DisabledSlots:4144959}"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:block.powder_snow.fall neutral @a ~ ~ ~ 2 0.6"
+        }
+      ]
+    }
+  },
+  "cooldown": 100,
+  "hud_render": {
+    "sprite_location": "animated_armor:textures/gui/resources/armor_resource_bar.png",
+    "bar_index": 6,
+    "should_render": true
+  },
+  "key": {
+    "key": "key.origins.secondary_active",
+    "continuous": false
+  },
+  "name": "Decoy",
+  "description": "Become an immobile suit of armor. Mobs will not target you in this state."
+}

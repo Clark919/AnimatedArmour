@@ -1,0 +1,174 @@
+{
+  "type": "origins:multiple",
+  "no_regen": {
+    "type": "origins:disable_regen"
+  },
+  "heal": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:if_else_list",
+      "actions": [
+        {
+          "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+              "type": "origins:ingredient",
+              "ingredient": {
+                "item": "minecraft:iron_ingot"
+              }
+            }
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "mainhand",
+                "action": {
+                  "type": "origins:consume",
+                  "amount": 1
+                }
+              },
+              {
+                "type": "origins:change_resource",
+                "resource": "animated_armor:steel_constitution_armor_resource",
+                "change": 2
+              },
+              {
+                "type": "origins:delay",
+                "ticks": 3,
+                "action": {
+                  "type": "origins:change_resource",
+                  "resource": "animated_armor:steel_constitution_armor_resource",
+                  "change": 2
+                }
+              },
+              {
+                "type": "origins:delay",
+                "ticks": 5,
+                "action": {
+                  "type": "origins:change_resource",
+                  "resource": "animated_armor:steel_constitution_armor_resource",
+                  "change": 1
+                }
+              },
+              {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.anvil.use",
+                "pitch": 1.1,
+                "volume": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "offhand",
+            "item_condition": {
+              "type": "origins:ingredient",
+              "ingredient": {
+                "item": "minecraft:iron_ingot"
+              }
+            }
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "offhand",
+                "action": {
+                  "type": "origins:consume",
+                  "amount": 1
+                }
+              },
+              {
+                "type": "origins:change_resource",
+                "resource": "animated_armor:steel_constitution_armor_resource",
+                "change": 2
+              },
+              {
+                "type": "origins:delay",
+                "ticks": 3,
+                "action": {
+                  "type": "origins:change_resource",
+                  "resource": "animated_armor:steel_constitution_armor_resource",
+                  "change": 2
+                }
+              },
+              {
+                "type": "origins:delay",
+                "ticks": 5,
+                "action": {
+                  "type": "origins:change_resource",
+                  "resource": "animated_armor:steel_constitution_armor_resource",
+                  "change": 1
+                }
+              },
+              {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.anvil.use",
+                "pitch": 1.1,
+                "volume": 0.5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cooldown": 60,
+    "hud_render": {
+      "sprite_location": "animated_armor:textures/gui/resources/armor_resource_bar.png",
+      "bar_index": 5
+    },
+    "key": {
+      "key": "key.origins.primary_active"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:steel_constitution_armor_resource",
+          "comparison": "<",
+          "compare_to": 32
+        },
+        {
+          "type": "origins:or",
+          "conditions": [
+            {
+              "type": "origins:equipped_item",
+              "equipment_slot": "mainhand",
+              "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                  "item": "minecraft:iron_ingot"
+                }
+              }
+            },
+            {
+              "type": "origins:equipped_item",
+              "equipment_slot": "offhand",
+              "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                  "item": "minecraft:iron_ingot"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "name": "Metallurgy",
+  "description": "Your body cannot be naturally or magically mended. You instead repair by consuming Iron Ingots.",
+  "badges": [
+    {
+      "sprite": "origins:textures/gui/badge/active.png",
+      "text": "Active ability, use with %s while holding a Iron Ingot in your hands."
+    }
+  ]
+}

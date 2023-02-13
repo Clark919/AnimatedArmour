@@ -1,0 +1,53 @@
+{
+  "type": "origins:multiple",
+  "no_jump": {
+    "type": "origins:modify_jump",
+    "modifier": {
+      "operation": "addition",
+      "value": -1
+    }
+  },
+  "no_movement": {
+    "type": "origins:attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.movement_speed",
+      "value": -10,
+      "operation": "addition"
+    }
+  },
+  "full_invis": {
+    "type": "origins:invisibility",
+    "render_armor": false,
+    "hidden": true
+  },
+  "no_aggro": {
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [{
+        "type": "origins:execute_command",
+        "permission_level": 4,
+        "command": "team add armor_decoy"
+      },
+        {
+          "type": "origins:execute_command",
+          "permission_level": 4,
+          "command": "team join armor_decoy @s"
+        },
+        {
+          "type": "origins:execute_command",
+          "permission_level": 4,
+          "command": "team join armor_decoy @e[type=!minecraft:player,distance=..20]"
+        }
+      ]
+    }
+  },
+  "no_damage": {
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": -1
+    }
+  }
+}

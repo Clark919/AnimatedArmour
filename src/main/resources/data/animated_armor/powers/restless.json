@@ -1,0 +1,16 @@
+{
+  "type": "origins:multiple",
+  "prevent_sleep": {
+    "type": "origins:prevent_sleep",
+    "message": "Suits of Armor don't need to sleep."
+  },
+  "prevent_phantoms": {
+    "type": "origins:modify_insomnia_ticks",
+    "modifier": {
+      "operation": "set_total",
+      "value": 0
+    }
+  },
+  "name": "Restless",
+  "description": "You cannot sleep, but you do not suffer from insomnia."
+}

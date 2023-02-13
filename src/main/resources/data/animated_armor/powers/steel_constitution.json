@@ -1,0 +1,135 @@
+{
+  "type": "origins:multiple",
+  "armor_resource": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 28,
+    "start_value": 28,
+    "hud_render": {
+      "sprite_location": "animated_armor:textures/gui/resources/armor_resource_bar.png",
+      "bar_index": 0,
+      "should_render": true
+    }
+  },
+  "damage_buffer": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 10,
+    "start_value": 10,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "increment_damage_buffer": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_damage_buffer",
+      "change": 1
+    },
+    "interval": 1
+  },
+  "ignore_damage": {
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+      "type": "origins:projectile",
+      "projectile": "minecraft:arrow",
+      "inverted": true
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_armor_resource",
+          "comparison": "!=",
+          "compare_to": 0
+        }
+      ]
+    },
+    "modifier": {
+      "name": "No Damage",
+      "operation": "multiply_base_additive",
+      "value": -1
+    },
+    "self_action": {
+      "type": "origins:if_else",
+      "condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:resource",
+            "resource": "*:*_damage_buffer",
+            "comparison": ">=",
+            "compare_to": 10
+          }
+        ]
+      },
+      "if_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:change_resource",
+            "resource": "*:*_armor_resource",
+            "change": -1
+          },
+          {
+            "type": "origins:change_resource",
+            "resource": "*:*_damage_buffer",
+            "change": -10
+          },
+          {
+            "type": "origins:execute_command",
+            "command": "playsound minecraft:entity.player.hurt master @a ~ ~ ~ 1 1"
+          }
+        ]
+      }
+    }
+  },
+  "kill_on_no_armor": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:damage",
+      "amount": 100,
+      "source": {
+        "name": "magic",
+        "bypasses_armor": true
+      }
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_armor_resource",
+      "comparison": "==",
+      "compare_to": 0
+    },
+    "interval": 4
+  },
+  "refresh_on_respawn": {
+    "type": "origins:action_on_callback",
+    "entity_action_respawned": {
+      "type": "origins:change_resource",
+      "resource": "*:*_armor_resource",
+      "change": 28
+      }
+  },
+  "name": "Steel Constitution",
+  "description": "You do not take health damage. Instead, you have a meter that displays the overall durability of your armour, which can only take one point of damage per attack.",
+  "badges": [
+    {
+      "sprite": "origins:textures/gui/badge/info.png",
+      "text": "For each 25% of durability you lose, a piece of your armor will break. Armor will always break in this order: Head, Chest, Legs, Feet."
+    },
+    {
+      "sprite": "origins:textures/gui/badge/info.png",
+      "text": "Losing your Helmet will only render entities close to you."
+    },
+    {
+      "sprite": "origins:textures/gui/badge/info.png",
+      "text": "Losing your Chestplate will greatly reduce your reach and damage."
+    },
+    {
+      "sprite": "origins:textures/gui/badge/info.png",
+      "text": "Losing your Leggings gives you a boost in movement speed."
+    }
+  ]
+}
