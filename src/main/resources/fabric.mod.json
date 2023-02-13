@@ -15,7 +15,7 @@
   },
 
   "license": "MIT",
-  "icon": "assets/animatedarmor/icon.png",
+  "icon": "assets/animated_armor/icon.png",
 
   "environment": "*",
   "entrypoints": {
