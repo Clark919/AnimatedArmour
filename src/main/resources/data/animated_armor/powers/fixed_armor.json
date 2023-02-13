@@ -50,6 +50,31 @@
       }
     ]
   },
+  "entity_action_lost": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.head with air",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.chest with air",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.legs with air",
+        "permission_level": 4
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item replace entity @s armor.feet with air",
+        "permission_level": 4
+      }
+    ]
+  },
   "execute_chosen_when_orb": true,
   "name": "Living Armor",
   "description": "You inhabit a suit of armor. You cannot equip other armors or remove your armor."
