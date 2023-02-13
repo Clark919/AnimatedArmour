@@ -2,9 +2,9 @@
 
 ## About
 
-An addon for the Origin mod that adds the Animated Armor; a sentient suit of armour this is very durable and has inherent magical properties.
+An addon for the Origin mod that adds the Animated Armor; a sentient suit of armour that is very durable and has inherent magical properties.
 
 ## Links
 
-CurseForge: \
-Origination Modpack:
+CurseForge: https://www.curseforge.com/minecraft/mc-mods/animated-armor-an-origins-addon\
+Origination Modpack: https://www.curseforge.com/minecraft/modpacks/origination-fabric
