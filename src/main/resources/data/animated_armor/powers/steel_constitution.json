@@ -80,7 +80,7 @@
           },
           {
             "type": "origins:execute_command",
-            "command": "playsound minecraft:entity.player.hurt master @a ~ ~ ~ 1 1"
+            "command": "playsound minecraft:entity.iron_golem.hurt master @a ~ ~ ~ 1 1"
           }
         ]
       }
