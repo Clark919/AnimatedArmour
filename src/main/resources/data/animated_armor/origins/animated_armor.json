@@ -15,8 +15,10 @@
     "animated_armor:restless",
     "animated_armor:no_shields",
     "animated_armor:immune",
+    "animated_armor:freeze_immune",
     "animated_armor:prevent_food",
-    "animated_armor:step_sound"
+    "animated_armor:step_sound",
+    "animated_armor:tooltips"
   ],
   "icon": "animated_armor:living_chestplate",
   "order": 10,

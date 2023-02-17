@@ -95,7 +95,7 @@
                 "action": {
                   "type": "origins:change_resource",
                   "resource": "animated_armor:steel_constitution_armor_resource",
-                  "change": 2
+                  "change": 1
                 }
               },
               {

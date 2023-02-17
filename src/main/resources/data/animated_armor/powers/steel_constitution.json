@@ -32,9 +32,19 @@
   "ignore_damage": {
     "type": "origins:modify_damage_taken",
     "damage_condition": {
-      "type": "origins:projectile",
-      "projectile": "minecraft:arrow",
-      "inverted": true
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:projectile",
+          "projectile": "minecraft:arrow",
+          "inverted": true
+        },
+        {
+          "type": "origins:name",
+          "name": "freeze",
+          "inverted": true
+        }
+      ]
     },
     "condition": {
       "type": "origins:and",

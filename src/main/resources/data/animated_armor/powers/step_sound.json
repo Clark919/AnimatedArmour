@@ -23,6 +23,12 @@
         {
           "type": "origins:sneaking",
           "inverted": true
+        },
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:armor_state_armor_state",
+          "comparison": ">=",
+          "compare_to": 2
         }
       ]
     }
@@ -49,6 +55,12 @@
         {
           "type": "origins:sneaking",
           "inverted": true
+        },
+        {
+          "type": "origins:resource",
+          "resource": "animated_armor:armor_state_armor_state",
+          "comparison": ">=",
+          "compare_to": 2
         }
       ]
     }
