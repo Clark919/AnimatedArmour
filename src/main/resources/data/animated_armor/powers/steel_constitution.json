@@ -3,8 +3,8 @@
   "armor_resource": {
     "type": "origins:resource",
     "min": 0,
-    "max": 28,
-    "start_value": 28,
+    "max": 24,
+    "start_value": 24,
     "hud_render": {
       "sprite_location": "animated_armor:textures/gui/resources/armor_resource_bar.png",
       "bar_index": 0,
@@ -119,7 +119,7 @@
     "entity_action_respawned": {
       "type": "origins:change_resource",
       "resource": "*:*_armor_resource",
-      "change": 28
+      "change": 24
       }
   },
   "name": "Steel Constitution",

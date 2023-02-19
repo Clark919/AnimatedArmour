@@ -41,7 +41,7 @@
                 "action": {
                   "type": "origins:change_resource",
                   "resource": "animated_armor:steel_constitution_armor_resource",
-                  "change": 2
+                  "change": 1
                 }
               },
               {
@@ -55,7 +55,7 @@
               },
               {
                 "type": "origins:play_sound",
-                "sound": "minecraft:block.anvil.use",
+                "sound": "minecraft:entity.iron_golem.repair",
                 "pitch": 1.1,
                 "volume": 0.5
               }
@@ -109,7 +109,7 @@
               },
               {
                 "type": "origins:play_sound",
-                "sound": "minecraft:block.anvil.use",
+                "sound": "minecraft:entity.iron_golem.repair",
                 "pitch": 1.1,
                 "volume": 0.5
               }
@@ -118,7 +118,7 @@
         }
       ]
     },
-    "cooldown": 60,
+    "cooldown": 50,
     "hud_render": {
       "sprite_location": "animated_armor:textures/gui/resources/armor_resource_bar.png",
       "bar_index": 5
@@ -133,7 +133,7 @@
           "type": "origins:resource",
           "resource": "animated_armor:steel_constitution_armor_resource",
           "comparison": "<",
-          "compare_to": 28
+          "compare_to": 24
         },
         {
           "type": "origins:or",
