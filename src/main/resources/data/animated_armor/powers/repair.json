@@ -33,20 +33,11 @@
               {
                 "type": "origins:change_resource",
                 "resource": "animated_armor:steel_constitution_armor_resource",
-                "change": 2
+                "change": 1
               },
               {
                 "type": "origins:delay",
-                "ticks": 3,
-                "action": {
-                  "type": "origins:change_resource",
-                  "resource": "animated_armor:steel_constitution_armor_resource",
-                  "change": 1
-                }
-              },
-              {
-                "type": "origins:delay",
-                "ticks": 5,
+                "ticks": 1,
                 "action": {
                   "type": "origins:change_resource",
                   "resource": "animated_armor:steel_constitution_armor_resource",
@@ -87,20 +78,11 @@
               {
                 "type": "origins:change_resource",
                 "resource": "animated_armor:steel_constitution_armor_resource",
-                "change": 2
+                "change": 1
               },
               {
                 "type": "origins:delay",
                 "ticks": 3,
-                "action": {
-                  "type": "origins:change_resource",
-                  "resource": "animated_armor:steel_constitution_armor_resource",
-                  "change": 1
-                }
-              },
-              {
-                "type": "origins:delay",
-                "ticks": 5,
                 "action": {
                   "type": "origins:change_resource",
                   "resource": "animated_armor:steel_constitution_armor_resource",
@@ -133,7 +115,7 @@
           "type": "origins:resource",
           "resource": "animated_armor:steel_constitution_armor_resource",
           "comparison": "<",
-          "compare_to": 24
+          "compare_to": 12
         },
         {
           "type": "origins:or",

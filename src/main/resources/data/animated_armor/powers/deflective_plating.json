@@ -1,18 +1,63 @@
 {
-  "type": "origins:modify_damage_taken",
-  "damage_condition": {
-    "type": "origins:projectile",
-    "projectile": "minecraft:arrow"
+  "type": "origins:multiple",
+  "yes_helmet": {
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+      "type": "origins:projectile",
+      "projectile": "minecraft:arrow"
+    },
+    "self_action": {
+      "type": "origins:execute_command",
+      "command": "playsound minecraft:block.anvil.land master @a ~ ~ ~ 1 1.8"
+    },
+    "modifier": {
+      "name": "No Damage",
+      "operation": "multiply_base_additive",
+      "value": -1
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "animated_armor:armor_state_armor_state",
+      "comparison": ">=",
+      "compare_to": 4
+    }
   },
-  "self_action": {
-    "type": "origins:execute_command",
-    "command": "playsound minecraft:block.anvil.land master @a ~ ~ ~ 1 1.8"
-  },
-  "modifier": {
-    "name": "No Damage",
-    "operation": "multiply_base_additive",
-    "value": -1
+  "no_helmet": {
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+      "type": "origins:projectile",
+      "projectile": "minecraft:arrow"
+    },
+    "self_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "animated_armor:steel_constitution_armor_resource",
+          "change": -1
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "kill @e[type=minecraft:arrow,distance=..3,nbt={inGround:0b}]"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.iron_golem.hurt master @a ~ ~ ~ 1 1"
+        }
+      ]
+    },
+    "modifier": {
+      "name": "No Damage",
+      "operation": "multiply_base_additive",
+      "value": -1
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "animated_armor:armor_state_armor_state",
+      "comparison": "<",
+      "compare_to": 4
+    }
   },
   "name": "Deflective Plating",
-  "description": "You take no damage from regular arrows."
+  "description": "You take no damage from regular arrows while your armor is fully intact."
 }

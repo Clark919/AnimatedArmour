@@ -107,7 +107,7 @@
           "type": "origins:resource",
           "resource": "animated_armor:steel_constitution_armor_resource",
           "comparison": ">=",
-          "compare_to": 18
+          "compare_to": 9
         }
       ]
     },
@@ -135,13 +135,13 @@
           "type": "origins:resource",
           "resource": "animated_armor:steel_constitution_armor_resource",
           "comparison": "<",
-          "compare_to": 18
+          "compare_to": 9
         },
         {
           "type": "origins:resource",
           "resource": "animated_armor:steel_constitution_armor_resource",
           "comparison": ">=",
-          "compare_to": 12
+          "compare_to": 6
         }
       ]
     },
@@ -169,13 +169,13 @@
           "type": "origins:resource",
           "resource": "animated_armor:steel_constitution_armor_resource",
           "comparison": "<",
-          "compare_to": 12
+          "compare_to": 6
         },
         {
           "type": "origins:resource",
           "resource": "animated_armor:steel_constitution_armor_resource",
           "comparison": ">=",
-          "compare_to": 6
+          "compare_to": 3
         }
       ]
     },
@@ -203,7 +203,7 @@
           "type": "origins:resource",
           "resource": "animated_armor:steel_constitution_armor_resource",
           "comparison": "<",
-          "compare_to": 6
+          "compare_to": 3
         }
       ]
     },
